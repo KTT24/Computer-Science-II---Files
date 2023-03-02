@@ -32,7 +32,7 @@ public class BoxWord {
         // reverse the word with string builder
         StringBuilder sb = new StringBuilder(word);
         sb.reverse();
-        output += sb.toString() + "\n";,
+        output += sb.toString() + "\n";
         return output;
     }
 }
