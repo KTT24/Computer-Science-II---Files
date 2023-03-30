@@ -1,5 +1,7 @@
 plugins {
     id 'java'
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.13'
 }
 
 group 'com.kutterthornton'
@@ -18,12 +20,7 @@ test {
     useJUnitPlatform()
 }
 
-tasks.register('run') {
-    // RUn the current open file
-    doLast {
-        exec {
-            commandLine 'java', '-cp', sourceSets.main.runtimeClasspath.asPath, file('src/main/java/com/kutterthornton/ComputerScienceII.java').toString()
-        }
-    }
-    
+javafx {
+    version = "19"
+    modules = [ 'javafx.controls' ]
 }
